@@ -13,7 +13,7 @@ int[] Array(int size)
     return array;
 }
 
-void Summ(int[] arr)
+int Summ(int[] arr)
 {
     int sum = 0;
 
@@ -24,7 +24,7 @@ void Summ(int[] arr)
             sum += arr[i];
         }
     }
-    Console.WriteLine($"Сумма элементов, стоящих на нечётных позициях = {sum}");
+    return sum;
 }
 
 Console.Write("Введите длину массива: ");
@@ -32,4 +32,5 @@ int x = int.Parse(Console.ReadLine()!);
 
 int[] array = Array(x);
 Summ(array);
+Console.WriteLine($"Сумма элементов, стоящих на нечётных позициях = {Summ(array)}");
 Console.Write(String.Join(", ", array));

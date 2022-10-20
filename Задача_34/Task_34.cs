@@ -13,7 +13,7 @@ int[] Array(int size)
     return array;
 }
 
-void ChetNum(int[] array)
+int ChetNum(int[] array)
 {
     int chet = 0;
 
@@ -24,7 +24,7 @@ void ChetNum(int[] array)
             chet++;
         }
     }
-    Console.WriteLine($"Четных элементов в массиве -> {chet}");
+    return chet;
 }
 
 Console.Write("Введите длину массива: ");
@@ -32,4 +32,5 @@ int x = int.Parse(Console.ReadLine()!);
 
 int[] array = Array(x);
 ChetNum(array);
+Console.WriteLine($"Четных элементов в массиве -> {ChetNum(array)}");
 Console.Write(String.Join(", ", array));
